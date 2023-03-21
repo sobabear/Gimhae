@@ -6,10 +6,12 @@ import CoreEngine
 
 class MainViewController: BaseViewController {
     var mapView = MTMapView()
+    var core = MainCore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        bind()
     }
     
     private func initView() {
@@ -19,6 +21,18 @@ class MainViewController: BaseViewController {
                 make.edges.equalToSuperview()
             }
         }
+    }
+    
+    private func bind() {
+        core.$state.map(\.dusts)
+            .sink { dusts in
+                print("❤️ \(dusts.first?.longitude)")
+            }
+            .store(in: &subscription)
+        
+        core.getDustAction()
+        
+
     }
 }
 

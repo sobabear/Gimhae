@@ -287,6 +287,8 @@
 		1505018429C9FF2F005016AC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1505018329C9FF2F005016AC /* libc++.tbd */; };
 		1505018629C9FF36005016AC /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1505018529C9FF36005016AC /* libxml2.tbd */; };
 		1505018829C9FF41005016AC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1505018729C9FF41005016AC /* libsqlite3.tbd */; };
+		1505018B29CA0D65005016AC /* SimpleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505018A29CA0D65005016AC /* SimpleError.swift */; };
+		1505018E29CA105B005016AC /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505018D29CA105B005016AC /* MainCore.swift */; };
 		1505FF2829C8C6BC005016AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF2729C8C6BC005016AC /* AppDelegate.swift */; };
 		1505FF2A29C8C6BC005016AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF2929C8C6BC005016AC /* SceneDelegate.swift */; };
 		1505FF2C29C8C6BC005016AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF2B29C8C6BC005016AC /* ViewController.swift */; };
@@ -416,6 +418,8 @@
 		1505018529C9FF36005016AC /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		1505018729C9FF41005016AC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1505018929CA0844005016AC /* KAKAOMAPBRIDGE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KAKAOMAPBRIDGE.h; sourceTree = "<group>"; };
+		1505018A29CA0D65005016AC /* SimpleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleError.swift; sourceTree = "<group>"; };
+		1505018D29CA105B005016AC /* MainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCore.swift; sourceTree = "<group>"; };
 		1505FF2429C8C6BC005016AC /* TheGimhae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGimhae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1505FF2729C8C6BC005016AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1505FF2929C8C6BC005016AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -629,6 +633,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1505018C29CA1054005016AC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1505FF4129C9FAF3005016AC /* MainViewController.swift */,
+				1505018D29CA105B005016AC /* MainCore.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		1505FF1B29C8C6BC005016AC = {
 			isa = PBXGroup;
 			children = (
@@ -668,9 +681,9 @@
 		1505FF3B29C9F9E9005016AC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1505018C29CA1054005016AC /* Main */,
 				1505FF4329C9FB08005016AC /* Base */,
 				1505FF3C29C9FA00005016AC /* BaseTabBarViewController.swift */,
-				1505FF4129C9FAF3005016AC /* MainViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -680,6 +693,7 @@
 			children = (
 				1505FF3F29C9FA7A005016AC /* System+ext.swift */,
 				1505018929CA0844005016AC /* KAKAOMAPBRIDGE.h */,
+				1505018A29CA0D65005016AC /* SimpleError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1462,7 +1476,9 @@
 				1505FF2A29C8C6BC005016AC /* SceneDelegate.swift in Sources */,
 				1505FF4829C9FD21005016AC /* DustService.swift in Sources */,
 				1505FF4529C9FB17005016AC /* BaseViewController.swift in Sources */,
+				1505018E29CA105B005016AC /* MainCore.swift in Sources */,
 				1505FF3D29C9FA00005016AC /* BaseTabBarViewController.swift in Sources */,
+				1505018B29CA0D65005016AC /* SimpleError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
