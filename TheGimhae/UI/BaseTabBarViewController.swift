@@ -5,7 +5,7 @@ final class BaseTabBarController: UITabBarController {
     private var subscription = Set<AnyCancellable>()
     
     let mainVC = MainViewController.init()
-//    let settingVC = SettingViewController()
+    let settingVC = DataViewController()
     private var previousIndex = 0
     
     override func viewDidLoad() {
@@ -41,11 +41,11 @@ final class BaseTabBarController: UITabBarController {
 //        mapVC.tabBarItem.selectedImage = mapTabSelectedImage
         
         // MARK: - Setting
-//        let settingTabSelectedImage = UIImage(systemName: "text.justify", withConfiguration: UIImage.SymbolConfiguration(font: .systemFont(ofSize: 20), scale: .large))!.imageWithoutBaseline()
-//        let settingTabUnSelectedImage = UIImage(systemName: "line.3.horizontal", withConfiguration: UIImage.SymbolConfiguration(font: .systemFont(ofSize: 20), scale: .large))!.imageWithoutBaseline()
-//
-//        settingVC.tabBarItem.image = settingTabUnSelectedImage
-//        settingVC.tabBarItem.selectedImage = settingTabSelectedImage
+        let settingTabSelectedImage = UIImage(systemName: "text.justify", withConfiguration: UIImage.SymbolConfiguration(font: .systemFont(ofSize: 20), scale: .large))!.imageWithoutBaseline()
+        let settingTabUnSelectedImage = UIImage(systemName: "line.3.horizontal", withConfiguration: UIImage.SymbolConfiguration(font: .systemFont(ofSize: 20), scale: .large))!.imageWithoutBaseline()
+
+        settingVC.tabBarItem.image = settingTabUnSelectedImage
+        settingVC.tabBarItem.selectedImage = settingTabSelectedImage
         
         
         self.viewControllers = [
@@ -53,7 +53,7 @@ final class BaseTabBarController: UITabBarController {
 //                UINavigationController(rootViewController: mapVC),
 //                addVC,
 //                UINavigationController(rootViewController: calVC),
-//                UINavigationController(rootViewController: settingVC),
+                UINavigationController(rootViewController: settingVC),
         ]
         for tab in tabBar.items! {
             tab.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
@@ -62,6 +62,7 @@ final class BaseTabBarController: UITabBarController {
     
     private func updateTabBar(color: UIColor = .label) {
         tabBar.isTranslucent = true
+        tabBar.backgroundColor = .red
 
         tabBar.tintColor = userInterfaceStyle == .light ? .black : .white
         tabBar.unselectedItemTintColor = .secondaryLabel
