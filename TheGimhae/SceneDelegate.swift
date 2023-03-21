@@ -19,7 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else {return}
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         
-        passcodeLockPresenter.present(scene)
         let tabbarVC = BaseTabBarController()
         window?.windowScene = scene
         window?.rootViewController = tabbarVC
