@@ -13,6 +13,12 @@
 		1505FF2F29C8C6BC005016AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1505FF2D29C8C6BC005016AC /* Main.storyboard */; };
 		1505FF3129C8C6BF005016AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1505FF3029C8C6BF005016AC /* Assets.xcassets */; };
 		1505FF3429C8C6BF005016AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1505FF3229C8C6BF005016AC /* LaunchScreen.storyboard */; };
+		1505FF3D29C9FA00005016AC /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF3C29C9FA00005016AC /* BaseTabBarViewController.swift */; };
+		1505FF4029C9FA7A005016AC /* System+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF3F29C9FA7A005016AC /* System+ext.swift */; };
+		1505FF4229C9FAF3005016AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF4129C9FAF3005016AC /* MainViewController.swift */; };
+		1505FF4529C9FB17005016AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF4429C9FB17005016AC /* BaseViewController.swift */; };
+		1505FF4829C9FD21005016AC /* DustService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505FF4729C9FD21005016AC /* DustService.swift */; };
+		46217F89B68B687C7743290F /* Pods_TheGimhae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFC8D66ED678CEA0BEF12C3 /* Pods_TheGimhae.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		1505FF3029C8C6BF005016AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1505FF3329C8C6BF005016AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1505FF3529C8C6BF005016AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1505FF3C29C9FA00005016AC /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		1505FF3F29C9FA7A005016AC /* System+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "System+ext.swift"; sourceTree = "<group>"; };
+		1505FF4129C9FAF3005016AC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1505FF4429C9FB17005016AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1505FF4729C9FD21005016AC /* DustService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustService.swift; sourceTree = "<group>"; };
+		A79B8DEB94F294B3E0C36A1D /* Pods-TheGimhae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheGimhae.debug.xcconfig"; path = "Target Support Files/Pods-TheGimhae/Pods-TheGimhae.debug.xcconfig"; sourceTree = "<group>"; };
+		CFFC8D66ED678CEA0BEF12C3 /* Pods_TheGimhae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheGimhae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FBF98E312A7C2C43ABB7D5 /* Pods-TheGimhae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheGimhae.release.xcconfig"; path = "Target Support Files/Pods-TheGimhae/Pods-TheGimhae.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46217F89B68B687C7743290F /* Pods_TheGimhae.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				1505FF2629C8C6BC005016AC /* TheGimhae */,
 				1505FF2529C8C6BC005016AC /* Products */,
+				AA0BD05194FC0F36AD6903AC /* Pods */,
+				341065F5FE417125D6671289 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,9 @@
 		1505FF2629C8C6BC005016AC /* TheGimhae */ = {
 			isa = PBXGroup;
 			children = (
+				1505FF4629C9FC24005016AC /* Service */,
+				1505FF3E29C9FA63005016AC /* Utils */,
+				1505FF3B29C9F9E9005016AC /* UI */,
 				1505FF2729C8C6BC005016AC /* AppDelegate.swift */,
 				1505FF2929C8C6BC005016AC /* SceneDelegate.swift */,
 				1505FF2B29C8C6BC005016AC /* ViewController.swift */,
@@ -67,6 +87,57 @@
 			path = TheGimhae;
 			sourceTree = "<group>";
 		};
+		1505FF3B29C9F9E9005016AC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1505FF4329C9FB08005016AC /* Base */,
+				1505FF3C29C9FA00005016AC /* BaseTabBarViewController.swift */,
+				1505FF4129C9FAF3005016AC /* MainViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1505FF3E29C9FA63005016AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1505FF3F29C9FA7A005016AC /* System+ext.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1505FF4329C9FB08005016AC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1505FF4429C9FB17005016AC /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1505FF4629C9FC24005016AC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1505FF4729C9FD21005016AC /* DustService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		341065F5FE417125D6671289 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC8D66ED678CEA0BEF12C3 /* Pods_TheGimhae.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA0BD05194FC0F36AD6903AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A79B8DEB94F294B3E0C36A1D /* Pods-TheGimhae.debug.xcconfig */,
+				D3FBF98E312A7C2C43ABB7D5 /* Pods-TheGimhae.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1505FF3829C8C6BF005016AC /* Build configuration list for PBXNativeTarget "TheGimhae" */;
 			buildPhases = (
+				5F3E54ED53401526CFACB6B5 /* [CP] Check Pods Manifest.lock */,
 				1505FF2029C8C6BC005016AC /* Sources */,
 				1505FF2129C8C6BC005016AC /* Frameworks */,
 				1505FF2229C8C6BC005016AC /* Resources */,
+				9450E8E10977396E38F80203 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +206,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F3E54ED53401526CFACB6B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheGimhae-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9450E8E10977396E38F80203 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheGimhae/Pods-TheGimhae-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheGimhae/Pods-TheGimhae-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheGimhae/Pods-TheGimhae-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1505FF2029C8C6BC005016AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1505FF2C29C8C6BC005016AC /* ViewController.swift in Sources */,
+				1505FF4029C9FA7A005016AC /* System+ext.swift in Sources */,
 				1505FF2829C8C6BC005016AC /* AppDelegate.swift in Sources */,
+				1505FF4229C9FAF3005016AC /* MainViewController.swift in Sources */,
 				1505FF2A29C8C6BC005016AC /* SceneDelegate.swift in Sources */,
+				1505FF4829C9FD21005016AC /* DustService.swift in Sources */,
+				1505FF4529C9FB17005016AC /* BaseViewController.swift in Sources */,
+				1505FF3D29C9FA00005016AC /* BaseTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +402,7 @@
 		};
 		1505FF3929C8C6BF005016AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A79B8DEB94F294B3E0C36A1D /* Pods-TheGimhae.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +431,7 @@
 		};
 		1505FF3A29C8C6BF005016AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3FBF98E312A7C2C43ABB7D5 /* Pods-TheGimhae.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

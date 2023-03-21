@@ -7,4 +7,7 @@ target 'TheGimhae' do
 
   # Pods for TheGimhae
 
+  pod 'CoreEngine'
+  pod 'SnapKit'
+  pod 'AddThen'
 end
